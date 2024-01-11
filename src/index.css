@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+.quiz-container {
+  border: 1px solid gray;
+  border-radius: 16px;
+  padding: 16px 24px;
+  max-width: 60vw;
+}
+
+.question {
+  font-weight: semibold;
+  font-size: 16px;
+}
+
+.question p {
+  margin-bottom: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  text-wrap: wrap;
+}
+
+.option {
+  cursor: pointer;
+  transition: all .3s;
+  padding: 8px;
+  border: 1px dashed black;
+  margin: 0 0 8px 0;
+  border-radius: 16px;
+  text-align: left;
+  text-transform: capitalize;
+  padding-left: 16px;
+}
+
+.option:hover {
+  color: rgb(55, 0, 0);
+  background: #d1d1d1;
+}
+
+.error {
+  border: 1px solid red;
+  color: red;
+}
+
+.success {
+  border: 1px solid green;
+  color: green;
+}
+
+.selected {
+  border: 1px solid black;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.next {
+  border: 1px solid black;
+  transition: all .3s;
+}
+
+.next:hover {
+  background-color: rgb(212, 227, 232);
+}
