@@ -3,32 +3,44 @@ import Question from './Question'
 
 const quizList = [
   {
+    answer: 0,
+    score: 10,
     question: "This is question to be asked from user.",
     options: [
-      {
-        score: 0,
-        text: "option 1"
-      },
-      {
-        score: 0,
-        text: "option 2"
-      },
-      {
-        score: 0,
-        text: "option 3"
-      },
-      {
-        score: 0,
-        text: "option 4"
-      },
+      "option 1",
+      "option 2",
+      "option 3",
+      "option 4"
     ]
-  }
+  },
+  {
+    answer: 0,
+    score: 10,
+    question: "This is question to be asked from user.",
+    options: [
+      "option 1",
+      "option 2",
+      "option 3",
+      "option 4"
+    ]
+  },
+  {
+    answer: 0,
+    score: 10,
+    question: "This is question to be asked from user.",
+    options: [
+      "option 1",
+      "option 2",
+      "option 3",
+      "option 4"
+    ]
+  },
 ]
 
 function App() {
   return (
     <div className='quiz-container'>
-      <Question {...quizList[0]} length={quizList.length} />
+      <Question quizList={quizList} length={quizList.length} />
     </div>
   )
 }

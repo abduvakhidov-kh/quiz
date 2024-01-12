@@ -128,3 +128,9 @@ button:focus-visible {
 .next:hover {
   background-color: rgb(212, 227, 232);
 }
+
+.next:disabled:hover {
+  background-color: rgb(255, 255, 255);
+  border: 1px solid #1a1a1a;
+  cursor: not-allowed;
+}
