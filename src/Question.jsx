@@ -4,12 +4,18 @@ const Question = ({ quizList, length }) => {
   const [selected, setSelected] = useState(null);
   const [current, setCurrent] = useState(0);
   const [score, setScore] = useState(0);
-  const disabled = current >= length - 1
+  const disabled = current == length
 
   const handleNext = () => {
     setCurrent((prevState) => prevState + 1);
     setSelected(null);
   };
+
+  const handleReset = () => {
+    setSelected(null)
+    setCurrent(0)
+    setScore(0)
+  }
 
   const handleChoice = (choice) => {
     if(selected) return
@@ -26,6 +32,16 @@ const Question = ({ quizList, length }) => {
       handleNext()
     }, 1000);
   };
+
+  if(disabled) {
+    return (
+      <div className="question">
+        <h3 className="finished-text">Quiz is done</h3>
+        <div className="final-score">You got <span className="score-value">{score}</span> in this quiz</div>
+        <button onClick={handleReset}>Reset</button>
+      </div>
+    )
+  }
 
 
   return (

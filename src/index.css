@@ -134,3 +134,18 @@ button:focus-visible {
   border: 1px solid #1a1a1a;
   cursor: not-allowed;
 }
+
+.finished-text {
+  margin-bottom: 4px;
+  font-size: 24px;
+}
+
+.score-value {
+  color: #747bff;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.final-score {
+  margin-bottom: 8px;
+}
